@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Digital Volunteer</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <style>
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body,
+    div,
+    form,
+    input,
+    select,
+    p {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+    }
+
+    body {
+      /* background: url("/uploads/media/default/0001/01/b5edc1bad4dc8c20291c8394527cb2c5b43ee13c.jpeg") no-repeat center; */
+      background-size: cover;
+    }
+
+    h1,
+    h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    h2 {
+      margin: 0 0 0 8px;
+    }
+
+    .main-block {
+      padding: 25px;
+      background: #1d3434f2;
+    }
+
+    .left-part,
+    form {
+      padding: 25px;
+      width: 77%;
+      margin: auto;
+    }
+
+    .left-part {
+      text-align: center;
+    }
+
+    .fa-graduation-cap {
+      font-size: 72px;
+    }
+
+    form {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input,
+    select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    input::placeholder {
+      color: #eee;
+    }
+
+    option:focus {
+      border: none;
+    }
+
+    option {
+      background: black;
+      border: none;
+    }
+
+    .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+    }
+
+    .checkbox a {
+      color: #26a9e0;
+    }
+
+    .checkbox a:hover {
+      color: #85d6de;
+    }
+
+    .btn-item,
+    button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px;
+      border: none;
+      background: #26a9e0;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    button:hover,
+    .btn-item:hover {
+      background: #85d6de;
+    }
+
+    @media (min-width: 568px) {
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      .main-block {
+        flex-direction: row;
+      }
+
+      .left-part,
+      form {
+        flex: 1;
+        height: auto;
+      }
+
+      .info {
+        font-size: large;
+      }
+
+      .title {
+        font-size: large;
+      }
+
+      .left-part,
+      .info,
+      .info select {
+        font-size: large;
+      }
+
+      button {
+        font-size: large;
+      }
+    }
+
+    textarea {
+      resize: none;
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      color: #eee;
+    }
+
+    @media only screen and (max-width: 480px) {
+      body {
+        columns: red;
+      }
+    }
+
+    .custom-checkbox {
+      display: inline-block;
+      position: relative;
+      padding-left: 30px;
+      margin-right: 20px;
+      cursor: pointer;
+      padding-top: 4px;
+    }
+
+    .custom-checkbox input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+    }
+
+    /* Style for the checked checkbox */
+    .custom-checkbox input:checked~.checkmark:after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      background-color: #007bff;
+      /* Change the color as needed */
+      border-radius: 50%;
+    }
+
+
+    /* Style for line break */
+    br {
+      clear: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-block">
+    <div class="left-part">
+      <img src="Logo.png" alt="Image">
+      <h1>Register Here</h1>
+      <p>Read Carefully and Complete the form requirements</p>
+    </div>
+    <form action="/volForm" method="post">
+      <div class="title">
+        <i class="fas fa-pencil-alt"></i>
+        <h2>Registeration form for Digital Volunteer</h2>
+      </div>
+      <div class="info">
+
+        <input class="fname" type="text" name="name" placeholder="Full name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="number" placeholder="WhatsApp Number" required>
+        <label for="cars">Choose Gender</label>
+        <select name="gender" id="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Others">Others</option>
+        </select>
+        <input type="text" name="fbLink" placeholder="Facebook Link">
+        <input type="text" name="instaLink" placeholder="Instagram Link">
+        <input type="text" name="LinkedlnLink" placeholder="LinkedIn Link">
+        <label for="region">Choose region</label>
+        <select name="region" id="region">
+          <option value="Islamabad">Islamabad</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Sindh">Sindh</option>
+          <option value="KPK">KPK</option>
+          <option value="Balochistan">Balochistan</option>
+          <option value="GB">GB</option>
+          <option value="AJK">AJK</option>
+        </select>
+        <input type="text" name="inst" placeholder="Institute Name" required>
+        <input type="text" name="field" placeholder="Field of Study" required>
+        <input type="text" name="year" placeholder="Year of study">
+        <label for="w3review">Explain your previous experiences briefly</label>
+        <textarea id="w3review" name="experiences" rows="4" cols="50" required></textarea>
+        <label class="labelSkill" style="margin: 1rem 0;"> Mention Your Best Skills</label>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="leadership" name="Leadership" value="Leadership">
+          <span class="checkmark"></span>
+          Leadership
+        </label>
+        <br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Communication" name="Communication" value="Communication">
+          <span class="checkmark"></span>
+          Communication
+        </label>
+        <br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Social Media" name="Social Media" value="Social Media">
+          <span class="checkmark"></span>
+          Social Media
+        </label>
+        <br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Information" name="Information" value="Information Technology">
+          <span class="checkmark"></span>
+          Information Technology
+        </label><br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Graphic" name="Graphic" value="Graphic Designing">
+          <span class="checkmark"></span>
+          Graphic Designing
+        </label><br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Writing" name="Writing" value="Content Writing">
+          <span class="checkmark"></span>
+          Content Writing
+        </label><br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Editing" name="Editing" value="Video Editing | Creator">
+          <span class="checkmark"></span>
+          Video Editing | Creator
+        </label><br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Freelancing" name="Freelancing" value="Freelancing">
+          <span class="checkmark"></span>
+          Freelancing
+        </label><br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Web" name="Web" value="Web Developer">
+          <span class="checkmark"></span>
+          Web Developer
+        </label><br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Marketing" name="Marketing" value="Marketing">
+          <span class="checkmark"></span>
+          Marketing
+        </label><br>
+        <button type="submit" href="/">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
