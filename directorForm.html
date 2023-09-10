@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Digital Volunteer</title>
+  <title>Campus Directror | Ambassador</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
     integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
@@ -233,6 +233,9 @@
         br {
             clear: left;
         }
+        button{
+          cursor: pointer;
+        }
   </style>
 </head>
 
@@ -243,13 +246,16 @@
       <h1>Register Here</h1>
       <p>Read Carefully and Complete the form requirements</p>
     </div>
-    <form action="/volForm" method="post">
+    <form action="/dirForm" method="post">
       <div class="title">
         <i class="fas fa-pencil-alt"></i>
-        <h2>Registeration form for Digital Volunteer</h2>
+        <h2>Registeration form for campus director | Ambassador</h2>
       </div>
       <div class="info">
-
+        <select name="postfor" id="postfor">
+          <option value="director">Director</option>
+          <option value="ambassador">Ambassador</option>
+        </select>
         <input class="fname" type="text" name="name" placeholder="Full name" required>
         <input type="email" name="email" placeholder="Email" required>
         <input type="text" name="number" placeholder="WhatsApp Number" required>
@@ -277,7 +283,60 @@
         <input type="text" name="year" id="year" placeholder="Year of study">
         <label for="w3review">Explain your previous experiences briefly</label>
         <textarea id="experiences" name="experiences" rows="4" cols="50" required></textarea>
-        
+        <label class="labelSkill" style="margin: 1rem 0;"> Mention Your Best Skills</label>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="leadership" name="Leadership" value="Leadership">
+          <span class="checkmark"></span>
+          Leadership
+        </label>
+        <br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Communication" name="Communication" value="Communication">
+          <span class="checkmark"></span>
+          Communication
+        </label>
+        <br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Social Media" name="Social Media" value="Social Media">
+          <span class="checkmark"></span>
+          Social Media
+        </label>
+        <br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Information" name="Information" value="Information Technology">
+          <span class="checkmark"></span>
+          Information Technology
+        </label><br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Graphic" name="Graphic" value="Graphic Designing">
+          <span class="checkmark"></span>
+          Graphic Designing
+        </label><br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Writing" name="Writing" value="Content Writing">
+          <span class="checkmark"></span>
+          Content Writing
+        </label><br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Editing" name="Editing" value="Video Editing | Creator">
+          <span class="checkmark"></span>
+          Video Editing | Creator
+        </label><br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Freelancing" name="Freelancing" value="Freelancing">
+          <span class="checkmark"></span>
+          Freelancing
+        </label><br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Web" name="Web" value="Web Developer">
+          <span class="checkmark"></span>
+          Web Developer
+        </label><br>
+        <label class="custom-checkbox">
+          <input type="checkbox" id="Marketing" name="Marketing" value="Marketing">
+          <span class="checkmark"></span>
+          Marketing
+        </label><br>
         <button type="submit" href="/">Submit</button>
     </form>
   </div>

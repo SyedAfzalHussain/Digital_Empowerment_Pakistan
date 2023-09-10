@@ -357,7 +357,7 @@
             .ictfXi {
                 width: 65%;
                 position: absolute;
-                bottom: 20px;
+                bottom: 80px;
             }
 
             .ictfXi span {
@@ -378,7 +378,7 @@
             .ictfXi {
                 width: 65%;
                 position: absolute;
-                bottom: 20px;
+                bottom: 80px;
             }
 
             .ictfXi span {
@@ -408,7 +408,7 @@
             color: #ffffff;
             border: none;
             border-radius: 24px;
-            background: #e6007f;
+            background: #211f1f;
             -webkit-text-decoration: none;
             text-decoration: none;
             position: absolute;
@@ -934,7 +934,7 @@
 
         /*!sc*/
         .sdkzq:hover {
-            color: #E6007F;
+            color: #1d3434f2;
         }
 
         /*!sc*/
@@ -1089,7 +1089,7 @@
             color: #ffffff;
             border: none;
             border-radius: 24px;
-            background: #e6007f;
+            background: #1d3434f2;
         }
 
         /*!sc*/
@@ -1099,7 +1099,7 @@
 
         /*!sc*/
         .gvOwBJ:focus {
-            box-shadow: 0 2px 8px #e6007f;
+            box-shadow: 0 2px 8px #1d3434f2;
         }
 
         /*!sc*/
@@ -1669,10 +1669,10 @@
             position: absolute;
             top: 98%;
             left: 40%;
-            box-shadow: 20px -18px 75px 58px #e6007f;
+            box-shadow: 20px -18px 75px 58px #211f1f;
             width: 150px;
             height: 110px;
-            background: #e6007f;
+            background: #211f1f;
             border-radius: 50%;
             z-index: 2;
             -webkit-filter: blur(25px);
@@ -1879,7 +1879,7 @@
         /*!sc*/
         .kmTjZ span {
             font-size: 27px;
-            border-top: 1px solid #e6007f;
+            border-top: 1px solid #211f1f;
             margin-bottom: -10px;
             padding-top: 8px;
             font-weight: 700;
@@ -1925,6 +1925,7 @@
 
             .iit {
                 visibility: visible;
+                margin: 0;
                 opacity: 1;
                 transform: translateX(0);
             }
@@ -1946,7 +1947,9 @@
         .logoImg {
             height: 4rem;
         }
-
+        .opacit{
+            opacity: 0.4;
+        }
         /*!sc*/
     </style>
     <title>Home</title>
@@ -2021,7 +2024,7 @@
                                         title="Qualifiers" loading="lazy" />
                                 </picture>
                                 <h3 style="padding-left: 1rem;">For Digital Volunteer </h3>
-                                <a href="/apply-for-amb" class="StyledLinkItem-sc-1yr88nj-0 bUkYjN">Apply for Volunteer<svg
+                                <a href="/apply-for-vol" class="StyledLinkItem-sc-1yr88nj-0 bUkYjN">Apply for Volunteer<svg
                                         aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right"
                                         class="svg-inline--fa fa-arrow-right fa-w-14 partials__StyledIcon-sc-1qhu686-0 evXKFf"
                                         role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -2123,14 +2126,18 @@
     <script>
         let kAnwUm = document.getElementsByClassName('jNXdLQ')
         let StyledGlobalNavMenu = document.getElementsByClassName('StyledGlobalNavMenu__RightNav-sc-1youwyq-6')
+        let main = document.getElementsByClassName('StyledPage__StyledBodyContainer-sc-1q0u831-0')
         kAnwUm[0].addEventListener('click', () => {
             console.log('clicked');
             // StyledGlobalNavMenu[0].classList.remove('cdEKOD')
             // StyledGlobalNavMenu[0].classList.add('iitabi')
             if (StyledGlobalNavMenu[0].classList.contains('iit')) {
                 StyledGlobalNavMenu[0].classList.remove('iit')
+                main[0].classList.remove('opacit')
+
             } else {
                 StyledGlobalNavMenu[0].classList.add('iit')
+                main[0].classList.add('opacit')
             }
         })
     </script>
